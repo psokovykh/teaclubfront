@@ -1,0 +1,42 @@
+.pagination {
+	display: flex;
+	height: 22px;
+	justify-content: center;
+}
+
+.pagination-page {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+	margin-left: 9px;
+	margin-right: 9px;
+	padding-top: 1px;
+}
+
+.pagination-page:first-child, .pagination-page:first-child.active {
+	margin-left: 0;
+}
+
+.pagination-page:last-child, .pagination-page:last-child.active {
+	margin-right: 0;
+}
+
+.pagination-page.active {
+	background: #F8D06A;
+	border-radius: 11px;
+	text-align: center;
+	padding-left: 6px;
+    padding-right: 6px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.pagination-skip {
+	border-bottom: 1px solid black;
+	width: 21px;
+	height: 18px;
+	margin-left: 2px;
+	margin-right: 2px;
+}

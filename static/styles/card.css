@@ -1,0 +1,170 @@
+/* Cards */
+#main_cards {
+	float: left;
+}
+
+.card {
+	z-index: 0;
+	position:static;
+
+}
+.card:hover  a .card-title{
+	color:black;
+	text-decoration: underline;
+}
+.card:hover a .card-text {
+	color:black;
+	text-decoration: none;
+}
+.card:hover a{
+	text-decoration: none;
+}
+.card:hover a .card-img-grad{
+	/*TODO:Animate gradient*/
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.49) 0%, rgba(186,160,58,0.75) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.49)), color-stop(100%, rgba(186,160,58,0.75)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.49) 0%, rgba(186,160,58,0.75) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0.49) 0%, rgba(186,160,58,0.75) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0.49) 0%, rgba(186,160,58,0.75) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0.49) 0%, rgba(186,160,58,0.75) 100%);
+	background-size: cover;
+}
+
+.card-img-grad p {
+	visibility: hidden;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 2rem;
+	font-style: bold;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.card:hover a .card-img-grad p {
+	visibility:visible;
+}
+
+.card-img-top{
+	position:relative;
+}
+.card-text {
+	white-space: pre-wrap;
+	font-size: 14px;
+}
+
+.card-body {
+	padding: 0px;
+}
+
+.card-title {
+	font-size: 24px;
+	line-height: 27px;
+	margin-bottom: 0.1rem;
+}
+
+.card-meta {
+	font-size: 0.8rem;
+	color: gray;
+	padding-bottom: 0.3rem;
+	padding-top: 0.2rem;
+
+}
+
+.card-mark {
+	z-index:10;
+	position:absolute;
+	background-color:gold;
+	padding: .4rem 1rem;
+	border-radius: 1rem;
+	top: 0rem;
+	left: 0rem;
+	font-size: smaller;
+}
+
+.mark-container{
+	padding-top: 1rem;
+	padding-left: 3px;
+	position: relative;
+}
+.no-border {
+	border: 0px;
+}
+
+.card-tag {
+	text-decoration: none;
+	color: gray;
+	font-size: smaller;
+	text-align: right;
+	float: right;
+	border: 1px solid;
+	border-radius: 0.3rem;
+	padding-left: .4rem;
+	padding-right: .4rem;
+	margin-left: 0.5rem;
+}
+.card-tag:link:visited{
+	color: gold;
+}
+.card-tag:hover {
+	text-decoration: none;
+	background-color: gray;
+	color: gold;
+	font-size: smaller;
+	text-align: right;
+	float: right;
+	border: 1px solid gray;
+	border-radius: 0.3rem;
+	padding-left: .4rem;
+	padding-right: .4rem;
+	margin-left: 0.5rem;
+}
+
+/*a number + 3px of mark-container left-padding*/
+.size-a {
+	width: 1143px;
+}
+.size-a .card-img-top {
+	width: 1140px;
+	height: 632px;
+}
+.size-a .card-img-grad {
+	width: inherit;
+	height: inherit;
+}
+.size-a .card-img-grad p {
+	font-size: 3rem;
+}
+
+.size-b {
+	width: 558px;
+}
+.size-b .card-img-top {
+	width: 555px;
+	height: 309px;
+}
+.size-b .card-img-grad {
+	width: inherit;
+	height: inherit;
+}
+.size-b .card-img-grad p {
+	font-size: 2rem;
+}
+
+
+.size-c {
+	width: 363px;
+}
+.size-c .card-img-top {
+	width: 360px;
+	height: 200px;
+}
+.size-c .card-img-grad {
+	width: inherit;
+	height: inherit;
+}
+.size-c .card-img-grad p {
+	font-size: 1.3rem;
+}

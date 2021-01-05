@@ -1,0 +1,28 @@
+.banner {
+	width: 360px;
+	height: 706px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(165.59deg, #FFE259 -5.78%, #FF6651 102.74%);
+}
+
+.banner-big-text {
+	padding: 17px 34px 0px 18px;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 48px;
+	line-height: 51px;
+	color: #FFFFFF;
+	overflow-wrap: break-word;
+}
+
+.banner-small-text {
+	padding: 0 83px 24px 22px;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 24px;
+}

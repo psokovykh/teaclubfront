@@ -1,0 +1,27 @@
+<header id="header" class="header-container">
+	<div id="header-navbar-toggler" class="d-block d-lg-none">
+		<button onclick="toggleMobileNavbar()">
+			<i class="fas fa-bars fa-2x text-muted" style="padding-top: 4px;"></i>
+		</button>
+	</div>
+	<div id="header-logo">
+		<a href="#">
+			<img src="/images/logo.png" alt="logo">
+		</a>
+	</div>
+	<nav id="header-navbar" class="navbar navbar-expand-lg justify-content-between d-none d-lg-flex">
+            {{ partial "header/navbar-links.html" }}
+			{{ partial "header/social.html" }}
+	</nav>
+	<div id="header-search" class="d-flex">
+		<button class="d-block d-lg-none" onclick="toggleMobileSearch()">
+			<i id="header-search-icon-mobile" class="fas fa-search fa-2x text-muted"  style="padding-top: 0px;"></i>
+		</button>
+		<div class="d-inline-flex justify-content-end align-items-center">
+			<button class="d-none d-lg-inline-block navbar-toggler" type="button" onclick="focusSearch()">
+				<i class="fas fa-search fa-m"></i>
+			</button>
+			<input class="form-control border-0 d-none d-lg-inline-block" type="text" placeholder="Поиск" id="header-search-input">
+		</div>
+	</div>
+</header>
