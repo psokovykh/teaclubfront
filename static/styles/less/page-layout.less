@@ -27,7 +27,9 @@ body {
     
 	@media (min-width: @lg-breakpoint) {
 		grid-template-areas: "content sidebar" !important;
-	}
+    }
+    
+    padding-bottom: 26px;
 }
 
 .content-container {
@@ -42,8 +44,10 @@ body {
     }
 
     @media (min-width: @lg-breakpoint) {
-		display: flex;
+        display: flex;
     }
+
+    flex-direction: column;
 
     width: 360px;
     padding-right: 26px;
