@@ -2,7 +2,11 @@
 @header-font: 'Yanone Kaffeesatz', sans-serif;
 
 @fg-color: #000000dd;
+@fg-muted-color: lighten(@fg-color, 20%);
 @bg-color: #fff;
+
+@accent-color: #a67c00;
+@accent-color-light: lighten(@accent-color, 20%);
 
 @max-body-width: 1200px;
 
@@ -17,4 +21,5 @@
 @import "header.less";
 @import "card-list.less";
 @import "sidebar.less";
+@import "footer.less";
 @import "js-helpers.less";

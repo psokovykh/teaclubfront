@@ -1,10 +1,30 @@
-h1, h2, h3, h4, h5 {
+.header-text {
 	font-family: @header-font;
 }
 
+.header-link {
+	.header-text;
+	color: @fg-color;
+
+	&:hover {
+		color: @accent-color;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	.header-text;
+}
+
 a {
+	color: @accent-color;
+
+	&:hover {
+		text-decoration: none;
+		color: @accent-color-light;
+	}
+
 	h1, h2, h3, h4, h5 {
-		color: @fg-color;
+		.header-link;
 	}
 }
 

@@ -1,0 +1,42 @@
+footer {
+	display: flex;
+	justify-content: space-evenly;
+
+	padding-bottom: 26px;
+
+	a {
+		color: @fg-muted-color;
+		margin-right: 26px;
+		margin-left: 26px;
+
+		&:hover {
+			text-decoration: none;
+			color: @accent-color;
+		}
+	}
+
+	> nav {
+		@media(min-width: @xs-breakpoint) {
+			display: none;
+		}
+		
+		@media(min-width: @xs-breakpoint) {
+			display: flex;
+		}
+
+		font-family: @header-font;
+		font-size: 1.2rem;
+
+		a {
+			margin-right: 26px;
+			margin-left: 26px;
+		}
+	}
+
+	> .social {
+		a {
+			margin-right: 13px;
+			margin-left: 13px;
+		}
+	}
+}
