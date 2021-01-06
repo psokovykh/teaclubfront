@@ -6,7 +6,7 @@
 	  padding-left: ~"max(13px, 3%)";
 	}
 
-	@media(min-width: @m-breakpoint) {
+	@media(min-width: @s-breakpoint) {
 	  column-count: 2;
 	  padding-right: 26px;
 	  padding-left: 26px;
@@ -27,9 +27,13 @@
 	@media(min-width: @xs-breakpoint){
 		display: none;
 	}
+
+	@media(min-width: @s-breakpoint){
+		display: inline-block;
+		max-height: 140px;
+	}
   
 	@media(min-width: @m-breakpoint) {
-		display: inline-block;
 		max-height: 70px;
 	}
   
@@ -46,4 +50,18 @@
 	left:0;
 	bottom:0;
 	background:linear-gradient(transparent, @bg-color 20px);
+}
+
+.card-img-top {
+	@media(min-width: @xs-breakpoint){
+		display: block;
+	}
+
+	@media(min-width: @s-breakpoint){
+		display: none;
+	}
+  
+	@media(min-width: @m-breakpoint) {
+		display: block;
+	}
 }
