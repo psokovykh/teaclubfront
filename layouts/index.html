@@ -19,15 +19,9 @@
     <!-- Styles (ours) -->
     <!--
 	<link rel="stylesheet" href="/styles/main.css">
-	<link rel="stylesheet" href="/styles/articles-feed.css">
-	<link rel="stylesheet" href="/styles/articles-list.css">
-	<link rel="stylesheet" href="/styles/carousel-top.css">
-	<link rel="stylesheet" href="/styles/article.css">
 	<link rel="stylesheet" href="/styles/side-block.css">
-	<link rel="stylesheet" href="/styles/carousel-best.css">
 	<link rel="stylesheet" href="/styles/banner.css">
 	<link rel="stylesheet" href="/styles/pagination.css">
-    <link rel="stylesheet" href="/styles/twitter.css">
     -->
 
     <link rel="stylesheet" href="/styles/css/main.css">
@@ -38,10 +32,10 @@
 	{{ partial "header.html" . }}
 	<div class="main-container">
 		<div class="content-container">
-			{{ partial "articles/card-list.html" . }}
+			{{ partial "card-list.html" . }}
 		</div>
 		<div class="sidebar-container">
-			I AM SIDEBAAAR
+			{{ partial "sidebar.html" . }}
 		</div>
 	</div>
 

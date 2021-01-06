@@ -30,15 +30,15 @@
 
 	@media(min-width: @s-breakpoint){
 		display: inline-block;
-		max-height: 140px;
+		max-height: 150px;
 	}
   
 	@media(min-width: @m-breakpoint) {
-		max-height: 70px;
+		max-height: 100px;
 	}
   
 	@media(min-width: @lg-breakpoint) {
-		max-height: 170px;
+		max-height: 200px;
 	}
 }
 
@@ -64,4 +64,16 @@
 	@media(min-width: @m-breakpoint) {
 		display: block;
 	}
+}
+
+.card-img-container {
+	@media(min-width: @xs-breakpoint){	
+		max-height: 190px;
+	}
+  
+	@media(min-width: @m-breakpoint) {
+		max-height: 240px;
+	}
+
+	overflow-y: hidden;
 }
