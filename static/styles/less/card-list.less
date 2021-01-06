@@ -96,8 +96,18 @@
 	}
 }
 
+@pagination-xs-size: 1.5rem;
+@pagination-lg-size: 1.1rem;
+
 .pagination-page {
-	font-size: 1.5rem;
+	@media(min-width: @xs-breakpoint){	
+		font-size: @pagination-xs-size;
+	}
+  
+	@media(min-width: @lg-breakpoint) {	
+		font-size: @pagination-lg-size;
+	}
+
 	margin-left: 9px;
 	margin-right: 9px;
 }
@@ -112,10 +122,20 @@
 
 .pagination-page.active {
 	background: @accent-color-light;
-	border-radius: 11px;
 	text-align: center;
-	padding-left: 0.75rem;
-    padding-right: 0.75rem;
+
+	@media(min-width: @xs-breakpoint){
+		border-radius: calc(@pagination-xs-size / 2);
+		padding-left: calc(@pagination-xs-size / 2);
+		padding-right: calc(@pagination-xs-size / 2);
+	}
+  
+	@media(min-width: @lg-breakpoint) {	
+		border-radius: calc(@pagination-lg-size / 2);
+		padding-left: calc(@pagination-lg-size / 2);
+		padding-right: calc(@pagination-lg-size / 2);
+	}
+
 	margin-right: 4px;
 	margin-left: 4px;
 }

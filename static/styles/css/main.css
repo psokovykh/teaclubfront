@@ -346,9 +346,18 @@ body {
   }
 }
 .pagination-page {
-  font-size: 1.5rem;
   margin-left: 9px;
   margin-right: 9px;
+}
+@media (min-width: 0px) {
+  .pagination-page {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .pagination-page {
+    font-size: 1.1rem;
+  }
 }
 .pagination-page:first-child,
 .pagination-page:first-child.active {
@@ -360,12 +369,23 @@ body {
 }
 .pagination-page.active {
   background: #ffc20d;
-  border-radius: 11px;
   text-align: center;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   margin-right: 4px;
   margin-left: 4px;
+}
+@media (min-width: 0px) {
+  .pagination-page.active {
+    border-radius: calc(1.5rem / 2);
+    padding-left: calc(1.5rem / 2);
+    padding-right: calc(1.5rem / 2);
+  }
+}
+@media (min-width: 992px) {
+  .pagination-page.active {
+    border-radius: calc(1.1rem / 2);
+    padding-left: calc(1.1rem / 2);
+    padding-right: calc(1.1rem / 2);
+  }
 }
 .pagination-skip {
   border-bottom: 3px dotted #a67c00;
