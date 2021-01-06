@@ -19,14 +19,13 @@
     <!-- Styles (ours) -->
     <!--
 	<link rel="stylesheet" href="/styles/main.css">
+	<link rel="stylesheet" href="/styles/articles-feed.css">
+	<link rel="stylesheet" href="/styles/articles-list.css">
 	<link rel="stylesheet" href="/styles/carousel-top.css">
 	<link rel="stylesheet" href="/styles/article.css">
 	<link rel="stylesheet" href="/styles/side-block.css">
-	<link rel="stylesheet" href="/styles/articles-feed.css">
 	<link rel="stylesheet" href="/styles/carousel-best.css">
-	<link rel="stylesheet" href="/styles/card.css">
 	<link rel="stylesheet" href="/styles/banner.css">
-	<link rel="stylesheet" href="/styles/articles-list.css">
 	<link rel="stylesheet" href="/styles/pagination.css">
     <link rel="stylesheet" href="/styles/twitter.css">
     -->
@@ -36,16 +35,19 @@
 
 <body>
 
-{{ partial "header.html" . }}
+	{{ partial "header.html" . }}
+	<div class="main-container">
+		<div class="content-container">
+			{{ partial "articles/card-list.html" . }}
+		</div>
+		<div class="sidebar-container">
+			I AM SIDEBAAAR
+		</div>
+	</div>
 
 	<!-- внешние скрипты -->
-	<script src="/jquery.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+	<script type="text/javascript" src="/jquery.js"></script>
 	<!-- внутренние скрипты -->
 	<script type="text/javascript" src="/js/main.js"></script>
-	<script type="text/javascript" src="/js/carousel-top.js"></script>
-	<script type="text/javascript" src="/js/carousel-best.js"></script>
 </body>
 </html>

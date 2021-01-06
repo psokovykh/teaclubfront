@@ -1,3 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+a h1,
+a h2,
+a h3,
+a h4,
+a h5 {
+  color: #000000dd;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-semi-bold {
+  font-weight: 500;
+}
+.pointer:hover {
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: inherit;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.75rem;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #000000dd;
@@ -16,42 +45,34 @@ body {
     margin-top: 26px;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-.text-bold {
-  font-weight: 600;
-}
-.text-semi-bold {
-  font-weight: 500;
-}
-.pointer:hover {
-  cursor: pointer;
-}
-button {
-  border: none;
-  background-color: inherit;
-  font-size: 1.25rem;
-  padding: 0.25rem 0.75rem;
-}
-.forced-inline-block {
-  display: inline-block !important;
-}
-.forced-flex {
-  display: flex !important;
+.main-container {
+  display: grid;
 }
 @media (min-width: 0px) {
-  .forced-hiden-on-xs {
-    display: none !important;
+  .main-container {
+    grid-template-areas: "content" !important;
   }
 }
 @media (min-width: 992px) {
-  .forced-hiden-on-xs {
-    display: initial !important;
+  .main-container {
+    grid-template-areas: "content sidebar" !important;
+  }
+}
+.content-container {
+  grid-area: content;
+}
+.sidebar-container {
+  grid-area: sidebar;
+  width: 360px;
+}
+@media (min-width: 0px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .sidebar-container {
+    display: flex;
   }
 }
 #header {
@@ -76,14 +97,16 @@ button {
 }
 @media (min-width: 0px) {
   #header {
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 992px) {
   #header {
-    padding-left: 26px;
-    padding-right: 26px;
+    margin-left: 26px;
+    margin-right: 26px;
+    margin-bottom: 26px;
   }
 }
 #header-navbar-toggler {
@@ -179,4 +202,70 @@ button {
 }
 #header-search > button > .fas {
   min-width: 45px;
+}
+@media (min-width: 0px) {
+  .card-columns {
+    column-count: 1;
+    padding-right: max(13px, 3%);
+    padding-left: max(13px, 3%);
+  }
+}
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-columns {
+    padding-left: 0px;
+  }
+}
+.card-title {
+  font-size: 1.5rem;
+}
+.card-text {
+  overflow-y: hidden;
+}
+@media (min-width: 0px) {
+  .card-text {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .card-text {
+    display: inline-block;
+    max-height: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .card-text {
+    max-height: 170px;
+  }
+}
+.card-text::before {
+  content: '';
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, #fff 20px);
+}
+.forced-inline-block {
+  display: inline-block !important;
+}
+.forced-flex {
+  display: flex !important;
+}
+@media (min-width: 0px) {
+  .forced-hiden-on-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .forced-hiden-on-xs {
+    display: initial !important;
+  }
 }
