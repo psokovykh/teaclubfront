@@ -80,6 +80,7 @@ button {
     text-align: start;
   }
 }
+.h5,
 h5 {
   font-size: 1.3rem;
 }
@@ -498,6 +499,19 @@ footer > #footer-social-icons a {
 }
 .carousel {
   margin-bottom: 20px;
+}
+@media (min-width: 0px) {
+  .carousel {
+    box-shadow: 0 -5px 6px #0005, 0 5px 5px #0005;
+    margin-left: -26px;
+    margin-right: -26px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel {
+    box-shadow: none;
+    margin: inherit;
+  }
 }
 .carousel-item {
   max-height: 90vh;
