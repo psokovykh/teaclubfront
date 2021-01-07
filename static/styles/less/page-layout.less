@@ -22,10 +22,12 @@ body {
 	display: grid;
 
 	@media (min-width: @xs-breakpoint) {
+		grid-template-columns: auto;
 		grid-template-areas: "content" !important;
     }
     
 	@media (min-width: @lg-breakpoint) {
+		grid-template-columns: auto min-content;
 		grid-template-areas: "content sidebar" !important;
     }
     
@@ -34,6 +36,16 @@ body {
 
 .content-container {
 	grid-area: content;
+	width: 100%;
+	@media(min-width: @xs-breakpoint){	
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+  
+	@media(min-width: @m-breakpoint) {
+		padding-left: 26px;
+		padding-right: 26px;
+	}
 }
 
 .sidebar-container {
@@ -50,5 +62,5 @@ body {
     flex-direction: column;
 
     width: 360px;
-    padding-right: 26px;
+	padding-right: 26px;
 }

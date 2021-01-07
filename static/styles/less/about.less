@@ -1,0 +1,40 @@
+.jumbotron h1 {
+    @media(min-width: @xs-breakpoint) {
+       text-align: center;
+    }
+    @media(min-width: @m-breakpoint) {
+        text-align: start;
+    }
+
+}
+.btn-dynamic {
+    @media(min-width: @xs-breakpoint) {
+        width: 100%;
+    }
+    @media(min-width: @m-breakpoint) {
+        width: auto;
+    }
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.carousel-item {
+    max-height: 90vh;
+
+    > img {
+        object-fit: contain;
+    }
+}
+
+.carousel-caption {
+    background-color: @bg-color-dark-transparent;
+    width: 100%;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 26px;
+}

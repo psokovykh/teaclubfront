@@ -46,3 +46,33 @@ button {
 	font-size: 1.25rem;
 	padding: .25rem .75rem;
 }
+
+p {
+	@media(min-width: @xs-breakpoint) {
+		text-align: justify;
+	}
+
+	@media(min-width: @s-breakpoint) {
+		text-align: start;
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	@media(min-width: @xs-breakpoint) {
+		text-align: center;
+	}
+
+	@media(min-width: @s-breakpoint) {
+		text-align: start;
+	}
+}
+
+.h5, h5 {
+	font-size: 1.3rem;
+}
+
+.form-control {
+	&:focus {
+		box-shadow: 0 0 0 0.2rem @accent-color-fade;
+	}
+}

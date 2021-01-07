@@ -3,10 +3,13 @@
 
 @fg-color: #000000dd;
 @fg-muted-color: lighten(@fg-color, 20%);
+
 @bg-color: #fff;
+@bg-color-dark-transparent: #000a;
 
 @accent-color: #a67c00;
 @accent-color-light: lighten(@accent-color, 20%);
+@accent-color-fade: fade(@accent-color, 30%);
 
 @max-body-width: 1200px;
 
@@ -17,9 +20,13 @@
 @xl-breakpoint: 1200px;
 
 @import "style.less";
+
 @import "page-layout.less";
 @import "header.less";
 @import "card-list.less";
 @import "sidebar.less";
 @import "footer.less";
+
+@import "about.less";
+
 @import "js-helpers.less";

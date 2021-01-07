@@ -2,19 +2,12 @@
 .card-columns {
 	@media(min-width: @xs-breakpoint){
 	  column-count: 1;
-	  padding-right: ~"max(13px, 3%)";
-	  padding-left: ~"max(13px, 3%)";
 	}
 
 	@media(min-width: @s-breakpoint) {
 	  column-count: 2;
-	  padding-right: 26px;
-	  padding-left: 26px;
 	}
 
-	@media(min-width: @xl-breakpoint) {
-		padding-left: 0px;
-	}
 }
 
 .card-title {
@@ -81,18 +74,12 @@
 .pagination {
 	display: flex;
 
-	@media(min-width: @xs-breakpoint){	
+	@media(min-width: @xs-breakpoint){
 		justify-content: center;
-
-		padding-left: 13px;
-		padding-right: 13px;
 	}
   
-	@media(min-width: @lg-breakpoint) {
+	@media(min-width: @lg-breakpoint) {	
 		justify-content: end;
-
-		padding-left: 26px;
-		padding-right: 26px;
 	}
 }
 
