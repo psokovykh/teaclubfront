@@ -14,14 +14,14 @@
 			{{ partial "header/social.html" }}
 	</nav>
 	<div id="header-search" class="d-flex">
-		<button class="d-block d-lg-none" onclick="toggleMobileSearch()">
-			<i id="header-search-icon-mobile" class="fas fa-search fa-2x text-muted"  style="padding-top: 0px;"></i>
-		</button>
-		<div class="d-inline-flex justify-content-end align-items-center">
+		<div class="d-inline-flex justify-content-end align-items-center header-search-input-container">
 			<button class="d-none d-lg-inline-block navbar-toggler" type="button" onclick="focusSearch()">
 				<i class="fas fa-search fa-m"></i>
 			</button>
-			<input class="form-control border-0 d-none d-lg-inline-block" type="text" placeholder="Поиск" id="header-search-input">
+			<input class="form-control border-0" type="text" placeholder="Поиск" id="header-search-input">
 		</div>
+		<button class="d-block d-lg-none" onclick="toggleMobileSearch()">
+			<i id="header-search-icon-mobile" class="fas fa-search fa-2x text-muted"  style="padding-top: 0px;"></i>
+		</button>
 	</div>
 </header>
