@@ -284,6 +284,7 @@ body {
 }
 #header-search {
   grid-area: search;
+  min-height: 64px;
 }
 #header-search #navbar-search-input {
   padding-top: 0;
@@ -503,8 +504,8 @@ footer > #footer-social-icons a {
 @media (min-width: 0px) {
   .carousel {
     box-shadow: 0 -5px 6px #0005, 0 5px 5px #0005;
-    margin-left: -26px;
-    margin-right: -26px;
+    margin-left: -13px;
+    margin-right: -13px;
   }
 }
 @media (min-width: 992px) {
