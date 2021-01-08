@@ -1,6 +1,0 @@
-.side-block {
-	grid-area: side-block;
-	display: flex;
-	flex-direction: column;
-	gap: 34px;
-}

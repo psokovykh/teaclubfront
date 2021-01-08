@@ -58,6 +58,7 @@
 
 #header-navbar {
 	grid-area: navbar;
+	padding-right: 0;
 	padding-bottom: 0;
 
 	.header-navbar-links {
@@ -120,7 +121,6 @@
 
 	a {
 		color: @fg-muted-color;
-		margin-right: 13px;
 		margin-left: 13px;
 
 		&:hover {
@@ -180,7 +180,7 @@
 								 !important;
 		}
 		@media (min-width: @lg-breakpoint){
-			grid-template-columns: min-content auto;
+			grid-template-columns: min-content auto !important;
 			grid-template-areas: "logo navbar"
 								"logo search"
 								!important;
