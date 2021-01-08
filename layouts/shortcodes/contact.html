@@ -1,1 +1,60 @@
-Contact
+<h1>Контакты</h1>
+
+<div class="contact-cards">
+	{{ partial "contact/person.html" . }}
+	{{ partial "contact/person.html" . }}
+	{{ partial "contact/person.html" . }}
+</div>
+
+<h2>Региональные представители</h2>
+
+<div id="city-name-accordion" class="in-text">
+
+	<div class="card">
+		<button class="card-header btn btn-block" id="btn-msk" data-toggle="collapse" data-target="#collapse-msk" >
+			Москва
+		</button>
+		<div id="collapse-msk" class="collapse">
+			<div class="contact-cards">
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<button class="card-header btn btn-block" id="btn-spb" data-toggle="collapse" data-target="#collapse-spb">
+			Санкт-Петербург
+		</button>
+		<div id="collapse-spb" class="collapse">
+			<div class="contact-cards">
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+				{{ partial "contact/person.html" . }}
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<button class="card-header btn btn-block" id="btn-zlp1" data-toggle="collapse" data-target="#collapse-zlp1">
+			Новая залупа
+		</button>
+		<div id="collapse-zlp1" class="collapse">
+			<div class="contact-cards">
+				{{ partial "contact/person.html" . }}
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<button class="card-header btn btn-block" id="btn-zlp2" data-toggle="collapse" data-target="#collapse-zlp2">
+			Старая залупа
+		</button>
+		<div id="collapse-zlp2" class="collapse">
+			<div class="contact-cards">
+				{{ partial "contact/person.html" . }}
+			</div>
+		</div>
+	</div>
+
+</div>

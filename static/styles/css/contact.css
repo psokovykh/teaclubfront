@@ -1,0 +1,17 @@
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contact-cards > .card {
+  min-width: 250px;
+}
+.contact-cards > .card .photo-container {
+  min-height: 200px;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+.contact-cards > .card .photo-container > .card-body {
+  flex-grow: 0;
+}
