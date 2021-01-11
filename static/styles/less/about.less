@@ -1,12 +1,28 @@
-.jumbotron h1 {
-    @media(min-width: @xs-breakpoint) {
-       text-align: center;
-    }
-    @media(min-width: @m-breakpoint) {
-        text-align: start;
+#join-jumbotron {
+    h1 {
+        @media(min-width: @xs-breakpoint) {
+        text-align: center;
+        }
+        @media(min-width: @m-breakpoint) {
+            text-align: start;
+        }
     }
 
+    & > .container {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .btn-lg {
+        @media(min-width: @lg-breakpoint) {
+            font-size: 1rem;
+        }
+        @media(min-width: @xl-breakpoint) {
+            font-size: 1.2rem;
+        }
+    }
 }
+
 .btn-dynamic {
     @media(min-width: @xs-breakpoint) {
         width: 100%;
@@ -16,7 +32,7 @@
     }
 }
 
-.carousel {
+#about-carousel.carousel {
     margin-bottom: 20px;
 
     @media(min-width: @xs-breakpoint) {
@@ -29,23 +45,24 @@
         box-shadow: none;
         margin: inherit;
     }
-}
-
-.carousel-item {
-    max-height: 90vh;
-
-    > img {
-        object-fit: contain;
+    
+    .carousel-item {
+        max-height: 90vh;
+    
+        > img {
+            object-fit: contain;
+        }
     }
-}
-
-.carousel-caption {
-    background-color: @bg-color-dark-transparent;
-    width: 100%;
-
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 26px;
+    
+    .carousel-caption {
+        background-color: @bg-color-dark-transparent;
+        width: 100%;
+    
+        left: 0;
+        right: 0;
+        bottom: 0;
+    
+        padding: 26px;
+    }
+    
 }

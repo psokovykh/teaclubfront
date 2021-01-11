@@ -13,6 +13,25 @@
 
 	.card-title {
 		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+
+	.date {
+		color: @fg-muted-color;
+		font-size: 0.7rem;
+		margin-top: 5px;
+		margin-bottom: 5px;
+
+		@media(min-width: @xs-breakpoint){
+			width: 100%;
+			text-align: center;
+		}
+
+		@media(min-width: @s-breakpoint){
+			width: auto;
+			text-align: start;
+		}
+	
 	}
 
 	.card-text {
@@ -110,7 +129,7 @@
 }
 
 .pagination-page.active {
-	background: @accent-color-light;
+	background: @accent-color-fade;
 	text-align: center;
 
 	@media(min-width: @xs-breakpoint){

@@ -19,7 +19,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #ffc20d;
+  color: rgba(166, 124, 0, 0.3);
 }
 a h1,
 a h2,
@@ -87,13 +87,13 @@ h5 {
 }
 .card-header.btn {
   text-align: left;
-  background-color: rgba(166, 124, 0, 0.1);
+  background-color: rgba(166, 124, 0, 0.3);
 }
 .card-header.btn:focus {
   box-shadow: none;
 }
 .jumbotron {
-  background-color: rgba(166, 124, 0, 0.1);
+  background-color: rgba(166, 124, 0, 0.3);
 }
 .card .btn {
   font-size: 1.3rem;
@@ -274,7 +274,13 @@ body {
 }
 @media (min-width: 992px) {
   #header-navbar .header-navbar-links a {
-    padding-right: 3em;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #header-navbar .header-navbar-links a.active {
+    background-color: #000d;
+    color: #ffdc73;
+    border-radius: 1em;
   }
 }
 @media (min-width: 0px) {
@@ -356,6 +362,25 @@ body {
 }
 #main-card-list .card-title {
   font-size: 1.5rem;
+  margin-bottom: 0;
+}
+#main-card-list .date {
+  color: rgba(51, 51, 51, 0.86666667);
+  font-size: 0.7rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media (min-width: 0px) {
+  #main-card-list .date {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 576px) {
+  #main-card-list .date {
+    width: auto;
+    text-align: start;
+  }
 }
 #main-card-list .card-text {
   overflow-y: hidden;
@@ -454,7 +479,7 @@ body {
   margin-right: 0;
 }
 .pagination-page.active {
-  background: #ffc20d;
+  background: rgba(166, 124, 0, 0.3);
   text-align: center;
   margin-right: 4px;
   margin-left: 4px;
@@ -529,13 +554,27 @@ footer > #footer-social-icons a {
   margin-left: 13px;
 }
 @media (min-width: 0px) {
-  .jumbotron h1 {
+  #join-jumbotron h1 {
     text-align: center;
   }
 }
 @media (min-width: 768px) {
-  .jumbotron h1 {
+  #join-jumbotron h1 {
     text-align: start;
+  }
+}
+#join-jumbotron > .container {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+@media (min-width: 992px) {
+  #join-jumbotron .btn-lg {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  #join-jumbotron .btn-lg {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 0px) {
@@ -548,29 +587,29 @@ footer > #footer-social-icons a {
     width: auto;
   }
 }
-.carousel {
+#about-carousel.carousel {
   margin-bottom: 20px;
 }
 @media (min-width: 0px) {
-  .carousel {
+  #about-carousel.carousel {
     box-shadow: 0 -5px 6px #0005, 0 5px 5px #0005;
     margin-left: -13px;
     margin-right: -13px;
   }
 }
 @media (min-width: 992px) {
-  .carousel {
+  #about-carousel.carousel {
     box-shadow: none;
     margin: inherit;
   }
 }
-.carousel-item {
+#about-carousel.carousel .carousel-item {
   max-height: 90vh;
 }
-.carousel-item > img {
+#about-carousel.carousel .carousel-item > img {
   object-fit: contain;
 }
-.carousel-caption {
+#about-carousel.carousel .carousel-caption {
   background-color: #000a;
   width: 100%;
   left: 0;

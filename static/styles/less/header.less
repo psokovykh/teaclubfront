@@ -104,7 +104,14 @@
 				font-size: 1.4rem;
 			}
 			@media(min-width: @lg-breakpoint) {
-				padding-right: 3em;
+				padding-right: 1em;
+				padding-left: 1em;
+
+				&.active {
+					background-color: @bg-color-darker-transparent;
+					color: @accent-color-light;
+					border-radius: 1em;
+				}
 			}
 		}
 	}
