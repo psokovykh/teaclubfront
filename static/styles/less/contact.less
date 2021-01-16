@@ -9,6 +9,16 @@
 
 		& > img {
 			grid-area: photo;
+
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+
+			&.contained {
+				object-fit: contain;
+				padding: 10%;
+			}
 		}
 		
 		& > .card-body {
@@ -57,13 +67,6 @@
 								 "contacts contacts";
 			grid-template-columns: 40% auto;
 			grid-template-rows: min-content auto min-content;
-
-			& > img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-				object-position: top;
-			}
 			
 			& > .card-body {
 				font-size: 0.8rem;

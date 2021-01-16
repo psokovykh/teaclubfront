@@ -392,12 +392,14 @@ body {
 }
 @media (min-width: 576px) {
   #main-card-list .card-text {
+    font-size: 0.8rem;
     display: inline-block;
     max-height: 150px;
   }
 }
 @media (min-width: 768px) {
   #main-card-list .card-text {
+    font-size: 0.9rem;
     max-height: 100px;
   }
 }
@@ -628,6 +630,14 @@ footer > #footer-social-icons a {
 }
 .contact-cards > .card > img {
   grid-area: photo;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.contact-cards > .card > img.contained {
+  object-fit: contain;
+  padding: 10%;
 }
 .contact-cards > .card > .card-body {
   grid-area: name;
@@ -672,12 +682,6 @@ footer > #footer-social-icons a {
     grid-template-areas: "photo name" "photo spacer" "contacts contacts";
     grid-template-columns: 40% auto;
     grid-template-rows: min-content auto min-content;
-  }
-  .contact-cards > .card > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
   }
   .contact-cards > .card > .card-body {
     font-size: 0.8rem;
