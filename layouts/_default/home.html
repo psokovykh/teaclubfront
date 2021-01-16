@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="ru">
+<head>
+	<title>Чайный Клуб</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Icon -->
+	<link href="/favicon.ico" rel="shortcut icon" >
+
+	<!-- Fonts -->
+		<!-- Yanone Kaffeesatz --> <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+		<!-- Roboto --> <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<!-- Font Awsome (icons) --> <link rel="stylesheet" href="/fonts/font-awesome/css/all.min.css">
+
+	<!-- Styles  -->
+			<!-- Bootstrap --> <link rel="stylesheet" href="/styles/third-party/bootstrap.css">
+			<!-- Our all-in-one stylesheet --> <link rel="stylesheet" href="/styles/css/main.css">
+</head>
+
+<body>
+	<!-- JS Includes Needed By Content -->
+		<!-- JQuery --> <script src="/js/third-party/jquery.js"></script>
+
+	{{ partial "header.html" . }}
+	<div class="main-container">
+		<div class="content-container">	
+            {{ .Content }}
+		</div>
+		<div class="sidebar-container">
+			{{ partial "sidebar.html" . }}
+		</div>
+	</div>
+	{{ partial "footer.html" . }}
+
+	<!-- JS Includes -->
+		<!-- Bootstrap --> <script src="/js/third-party/bootstrap.js"></script>
+		<!-- Our helpers --> <script src="/js/main.js"></script>
+</body>
+</html>
