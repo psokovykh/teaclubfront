@@ -14,9 +14,23 @@
 			На карту Сбербанк
 		</button>
 		<div id="collapse-sber" class="collapse show" aria-labelledby="btn-sber" aria-expanded="false" data-parent="#payment-method-accordion">
-			<div class="card-body">
-				4276 5500 5408 1750
-			</div>
+			<p>
+				Чтобы сделать пожертвование, скопируйте номер карты и воспользуйтесь сервисом Сбербанк-онлайн. Обратите внимание, перевод может облагаться комиссией.
+			</p>
+			<form>
+				<div class="input-group">
+					<img src="/images/donate/sber.png" class="credentials-icon">
+					<input id="sber-input" class="form-control" value="4276 5500 5408 1750" onclick="copy_sber()" readonly>
+					<span class="input-group-btn">
+						<button class="btn" type="button" onclick="copy_sber()">
+							<i class="far fa-clipboard"></i>
+						</button>
+					</span>
+				</div>
+			</form>
+			<form action="https://online.sberbank.ru" role="search" method="get" target="_blank">
+				<button type="submit" class="btn btn-block btn-outline-primary" href="">Перейти в Сбербанк.Онлайн</button>
+			</form>
 		</div>
 	</div>
 
@@ -25,9 +39,20 @@
 			На карту Тинькофф
 		</button>
 		<div id="collapse-tinkoff" class="collapse" aria-labelledby="btn-tinkoff" data-parent="#payment-method-accordion" aria-expanded="false">
-			<div class="card-body">
-				5536 9137 9452 9624
-			</div>
+			<p>
+				Чтобы сделать пожертвование, скопируйте номер карты и воспользуйтесь приложением Тинькофф. Обратите внимание, перевод может облагаться комиссией.
+			</p>
+			<form>
+				<div class="input-group">
+					<img src="/images/donate/tinkoff.png" class="credentials-icon">
+					<input id="tinkoff-input" class="form-control" value="5536 9137 9452 9624" onclick="copy_tinkoff()" readonly>
+					<span class="input-group-btn">
+						<button class="btn" type="button" onclick="copy_tinkoff()">
+							<i class="far fa-clipboard"></i>
+						</button>
+					</span>
+				</div>
+			</form>
 		</div>
 	</div>
 
@@ -36,9 +61,23 @@
 			Биткоин
 		</button>
 		<div id="collapse-btc" class="collapse" aria-labelledby="btn-btc" data-parent="#payment-method-accordion" aria-expanded="false">
-			<div class="card-body">
-				ASdsldakfsdj oisdajrio jowj foij oiajf oisdaoif joai
+			<div class="qr-with-description">
+				<img src="/images/donate/btc_qr.png">
+				<p>
+					Перевод через биткоин — это законно, анонимно и безопасно как для отправителя, так и для получателя. Биткоины можно приобрести на бирже, например, LocalBitcoins и перевести нам.
+				</p>
 			</div>
+			<form>
+				<div class="input-group">
+					<img src="/images/donate/btc.png" class="credentials-icon">
+					<input id="btc-input" class="form-control" value="1MBkcH7cSkNuxdtrXrNFygiEtemCMpV8V4" onclick="copy_btc()" readonly>
+					<span class="input-group-btn">
+						<button class="btn" type="button" onclick="copy_btc()">
+							<i class="far fa-clipboard"></i>
+						</button>
+					</span>
+				</div>
+			</form>
 		</div>
 	</div>
 
@@ -47,9 +86,23 @@
 			Etherium
 		</button>
 		<div id="collapse-eth" class="collapse" aria-labelledby="btn-eth" data-parent="#payment-method-accordion" aria-expanded="false">
-			<div class="card-body">
-				ASdsldakfsdj oisdajrio jowj foij oiajf oisdaoif joai
+			<div class="qr-with-description">
+				<img src="/images/donate/eth_qr.png">
+				<p>
+					Перевод через Etherium — это законно, анонимно и безопасно как для отправителя, так и для получателя. Etherium можно приобрести на бирже, например, MyCrypto и перевести нам.
+				</p>
 			</div>
+			<form>
+				<div class="input-group">
+					<img src="/images/donate/eth.png" class="credentials-icon">
+					<input id="eth-input" class="form-control" value="0xf44fbe11d3f05d2c351ae4a96762a3a78ea4121b" onclick="copy_eth()" readonly>
+					<span class="input-group-btn">
+						<button class="btn" type="button" onclick="copy_eth()">
+							<i class="far fa-clipboard"></i>
+						</button>
+					</span>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
@@ -67,3 +120,22 @@
 		display: none;
 	}
 </style>
+
+<script>
+	function copy_sber() {
+		$('#sber-input').select();
+		document.execCommand('copy');
+	}
+	function copy_tinkoff() {
+		$('#tinkoff-input').select();
+		document.execCommand('copy');
+	}
+	function copy_btc() {
+		$('#btc-input').select();
+		document.execCommand('copy');
+	}
+	function copy_eth() {
+		$('#eth-input').select();
+		document.execCommand('copy');
+	}
+</script>

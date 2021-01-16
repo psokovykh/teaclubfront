@@ -84,8 +84,13 @@ h5 {
 }
 .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(166, 124, 0, 0.3);
+  border-color: rgba(166, 124, 0, 0.3);
+}
+.form-control:read-only {
+  background-color: inherit;
 }
 .card-header.btn {
+  font-size: 1.3rem;
   text-align: left;
   background-color: rgba(166, 124, 0, 0.3);
 }
@@ -95,11 +100,36 @@ h5 {
 .jumbotron {
   background-color: rgba(166, 124, 0, 0.3);
 }
-.card .btn {
-  font-size: 1.3rem;
-}
 div.in-text {
   margin-bottom: 26px;
+}
+@media (min-width: 0px) {
+  .collapse {
+    padding: 10px;
+  }
+}
+@media (min-width: 576px) {
+  .collapse {
+    padding: 1.5rem;
+  }
+}
+form {
+  margin-bottom: 1rem;
+}
+.btn-outline-primary {
+  color: #a67c00;
+  border-color: #a67c00;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  color: #fff;
+  background-color: #a67c00 !important;
+  border-color: #a67c00 !important;
+}
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(166, 124, 0, 0.3) !important;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -634,6 +664,8 @@ footer > #footer-social-icons a {
   width: 100%;
   object-fit: cover;
   object-position: top;
+  border-right: 1px solid;
+  border-color: inherit;
 }
 .contact-cards > .card > img.contained {
   object-fit: contain;
@@ -718,8 +750,48 @@ footer > #footer-social-icons a {
     grid-template-rows: min-content auto min-content;
   }
 }
-.collapse {
-  padding: 10px;
+img.credentials-icon {
+  object-fit: contain;
+  margin-right: 1rem;
+  height: 2em;
+}
+.qr-with-description {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  padding-bottom: 1rem;
+}
+.qr-with-description > img {
+  grid-area: qr;
+  object-fit: contain;
+}
+.qr-with-description > p {
+  grid-area: description;
+}
+@media (min-width: 0px) {
+  .qr-with-description {
+    grid-template-areas: "qr" "description";
+    width: 100%;
+  }
+  .qr-with-description > img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 576px) {
+  .qr-with-description {
+    grid-template-areas: "description qr";
+  }
+  .qr-with-description > img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .qr-with-description > p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 .forced-flex {
   display: flex !important;

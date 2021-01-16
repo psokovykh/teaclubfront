@@ -73,10 +73,16 @@ h1, h2, h3, h4, h5 {
 .form-control {
 	&:focus {
 		box-shadow: 0 0 0 0.2rem @accent-color-fade;
+		border-color: @accent-color-fade;;
+	}
+
+	&:read-only {
+		background-color: inherit;
 	}
 }
 
 .card-header.btn {
+	font-size: 1.3rem;
 	text-align: left;
 	background-color: @accent-color-fade;
 
@@ -89,10 +95,35 @@ h1, h2, h3, h4, h5 {
 	background-color: @accent-color-fade;
 }
 
-.card .btn {
-	font-size: 1.3rem;
-}
-
 div.in-text {
 	margin-bottom: 26px;
+}
+
+.collapse {
+	@media (min-width: @xs-breakpoint) {
+		padding: 10px;
+	}
+
+	@media (min-width: @s-breakpoint) {
+		padding: 1.5rem;
+	}
+}
+
+form {
+	margin-bottom: 1rem;
+}
+
+.btn-outline-primary {
+	color: @accent-color;
+	border-color: @accent-color;
+
+	&:hover, &:active, &:focus {
+		color: @fg-color-light;
+		background-color: @accent-color !important;
+		border-color: @accent-color !important;
+	}
+
+	&:active, &:focus {
+		box-shadow: 0 0 0 0.2rem @accent-color-fade !important;
+	}
 }

@@ -1,0 +1,48 @@
+img.credentials-icon {
+	object-fit: contain;
+	margin-right: 1rem;
+	height: 2em;
+}
+
+.qr-with-description {
+	display: grid;
+	grid-row-gap: 1rem;
+	grid-column-gap: 1rem;
+	padding-bottom: 1rem;
+
+	& > img {
+		grid-area: qr;
+
+		object-fit: contain;
+	}
+
+	& > p {
+		grid-area: description;
+	}
+
+	@media (min-width: @xs-breakpoint) {
+		grid-template-areas: "qr" "description";
+		width: 100%;
+
+		& > img {
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@media (min-width: @s-breakpoint) {
+		grid-template-areas: "description qr";
+
+		& > img {
+			width: 60%;
+			margin-left: auto;
+			margin-right: 0;
+		}
+		
+		& > p {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+}
