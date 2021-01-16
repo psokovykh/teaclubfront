@@ -11,26 +11,46 @@
 <div id="join-jumbotron" class="jumbotron jumbotron-fluid">
 	<div class="container">
 		<h1 class="display-5">Присоединяйтесь! </h1>
-		<button class="btn btn-outline-dark btn-lg btn-dynamic" data-target="regulations_dropdown">
-			<i class="fas fa-file"></i> Устав движения
-		</button>
-		<button class="btn btn-outline-dark btn-lg btn-dynamic" data-target="principles_dropdown">
-			<i class="far fa-lightbulb"></i> Наши принципы
-		</button>
-		<button class="btn btn-outline-dark btn-lg btn-dynamic">
-			<i class="fas fa-handshake"></i> Вступить
-		</button>
+		<div class="dropdown" style="display: inline;">
+			<button class="btn btn-outline-dark btn-lg btn-dynamic dropdown-toggle" type="button" id="dropdown_regulations" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-file"></i> Устав движения
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdown_regulations">
+				<button class="dropdown-item no-bg-on-active">
+					<a href="/uploads/files/placeholder__statute_file/teaclub_regulations.pdf" class="header-link" download="Устав движения Чайный клуб.pdf">
+						<i class="fas fa-download"></i> Скачать
+					</a>
+				</button>
+				<button class="dropdown-item no-bg-on-active">
+					<a href="/uploads/files/placeholder__statute_file/teaclub_regulations.pdf" class="header-link" target="_blank">
+						<i class="fas fa-external-link-alt"></i> Открыть
+					</a>
+				</button>
+			</div>
+		</div>
+		<div class="dropdown" style="display: inline;">
+			<button class="btn btn-outline-dark btn-lg btn-dynamic dropdown-toggle"  type="button" id="dropdown_principles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="far fa-lightbulb"></i> Наши принципы
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdown_principles">
+				<button class="dropdown-item no-bg-on-active">
+					<a href="/uploads/files/placeholder__principles_file/teaclub_principles.pdf" class="header-link" download="Принципы движения Чайный клуб.pdf">
+						<i class="fas fa-download"></i> Скачать
+					</a>
+				</button>
+				<button class="dropdown-item no-bg-on-active">
+					<a href="/uploads/files/placeholder__principles_file/teaclub_principles.pdf" class="header-link" target="_blank">
+						<i class="fas fa-external-link-alt"></i> Открыть
+					</a>
+				</button>
+			</div>
+		</div>
+		<form action="/join" role="search" method="get" target="_blank" style="display: inline;">	
+			<button type="submit" class="btn btn-outline-dark btn-lg btn-dynamic">
+				<i class="fas fa-handshake"></i> Вступить
+			</button>
+		</form>
 	</div>
-	<!--
-		<ul id="regulations_dropdown" class="dropdown-content" tabindex="0">
-			<li tabindex="0"><a href="/uploads/files/placeholder__statute_file/teaclub_regulations.pdf" download="Устав движения Чайный клуб.pdf"><i class="material-icons">file_download</i> Скачать</a></li>
-			<li tabindex="0"><a href="/uploads/files/placeholder__statute_file/teaclub_regulations.pdf" target="_blank"><i class="material-icons">open_in_new</i> Открыть</a></li>
-		</ul>
-		<ul id="principles_dropdown" class="dropdown-content" tabindex="0">
-			<li tabindex="0"><a href="/uploads/files/placeholder__principles_file/teaclub_principles.pdf" download="Принципы движения Чайный клуб.pdf"><i class="material-icons">file_download</i> Скачать</a></li>
-			<li tabindex="0"><a href="/uploads/files/placeholder__principles_file/teaclub_principles.pdf" target="_blank"><i class="material-icons">open_in_new</i> Открыть</a></li>
-		</ul>
-	-->
 </div>
 
 <h1>Чем мы занимаемся?</h1>
@@ -77,3 +97,9 @@
 		<span class="sr-only">Next</span>
 	</a>
 </div>
+
+<script>
+	$(function() {
+		$('.dropdown-toggle').dropdown();
+	});
+</script>

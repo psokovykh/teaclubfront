@@ -131,6 +131,9 @@ form {
 .btn-outline-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(166, 124, 0, 0.3) !important;
 }
+button.no-bg-on-active:active {
+  background-color: inherit;
+}
 body {
   font-family: 'Roboto', sans-serif;
   color: #000000dd;
