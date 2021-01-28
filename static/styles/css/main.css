@@ -104,12 +104,14 @@ div.in-text {
   margin-bottom: 26px;
 }
 @media (min-width: 0px) {
-  .collapse {
+  .collapse,
+  .collapsing {
     padding: 10px;
   }
 }
 @media (min-width: 576px) {
-  .collapse {
+  .collapse,
+  .collapsing {
     padding: 1.5rem;
   }
 }
