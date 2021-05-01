@@ -200,15 +200,65 @@
 }
 
 .header-sticky {
+	display: flex !important;
+	flex-direction: row;
+
+	@media (max-width: @under-s-breakpoint) {
+		margin-bottom: -30px !important;
+
+		#header-search {
+			height: 119px;
+
+			#header-search-input {
+				height: 90px;
+
+				font-size: @font-size-big-mobile;
+			}
+		}
+	}
+
+	@media (min-width: @xs-breakpoint){
+
+		#header-navbar-toggler {
+			display: none !important;
+		}
+
+		#header-navbar {
+			display: flex !important;
+			flex-direction: row;
+			flex-basis: 100%;
+
+			box-shadow: none;
+
+			&.header-navbar-hidden-mobile {
+				display: none !important;
+			}
+		}
+
+		#header-search {
+			#header-search-input {
+				display: none !important;
+			}
+
+			&.header-search-shown-mobile {
+				flex-basis: 100%;
+
+				.header-search-input-container {
+					flex-basis: 100%;
+				}
+	
+				#header-search-input {
+					display: flex !important;
+				}
+			}
+		}
+	}
+
 	@media (min-width: @lg-breakpoint){
 		display: flex !important;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		column-gap: 0 !important;
-
-		#header-logo {
-			display: none;
-		}
 
 		#header-navbar {
 			flex-basis: 100%;
@@ -220,9 +270,18 @@
 			order: -1;
 		}
 
+		#header-search {
+			#header-search-input {
+				display: block !important;
+			}
+		}
+
+		margin-bottom: 66px !important;
+
 		padding: 0 @header-sticky-padding-horizontal;
 		padding-top: @header-sticky-padding-top;
 	}
+
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -231,8 +290,12 @@
 
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.1) !important;
 
-	-webkit-transform: translateY(-100px);
-	transform: translateY(-100px);
+	#header-logo {
+		display: none;
+	}
+
+	-webkit-transform: translateY(-120px);
+	transform: translateY(-120px);
 	
 	&-on-screen {
 		-webkit-transition: -webkit-transform 2s ease-in-out;
@@ -244,7 +307,7 @@
 	&-beyond-screen {
 		-webkit-transition: -webkit-transform 2s ease-in-out;
 		transition: transform 0.25s ease-in-out;
-		-webkit-transform: translateY(-100px);
-		transform: translateY(-100px);
+		-webkit-transform: translateY(-120px);
+		transform: translateY(-120px);
 	}
 }
