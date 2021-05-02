@@ -1,7 +1,7 @@
 #header {
 	display: grid;
 	
-	column-gap: 65px;
+	column-gap: 56px;
 	padding-bottom: 10px;
 	
 	@media (min-width: @xs-breakpoint){
@@ -11,6 +11,10 @@
 				
 		row-gap: 0;
 		box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+	}
+
+	@media (min-width: @s-breakpoint) {
+		column-gap: 65px;
 	}
 
 	@media (min-width: @lg-breakpoint){    
