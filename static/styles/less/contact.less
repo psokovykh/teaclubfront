@@ -5,6 +5,9 @@
 
 	& > .card {
 		display: grid;
+
+		height: max-content !important;
+
 		margin-bottom: 26px;
 
 		& > img {
@@ -76,6 +79,11 @@
 
 			& > .contact-info {
 				font-size: 0.9rem;
+
+				& > .list-group-item:last-child {
+					border-bottom: none;
+				}
+
 			}
 		}
 
